@@ -35,5 +35,10 @@ class Particle {
         line(this.pos.x, this.pos.y, closest.x, closest.y);
       }
     }
+
+    // Centre
+    noStroke();
+    fill(255);
+    ellipse(this.pos.x, this.pos.y, 8);
   }
 }
