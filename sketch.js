@@ -48,8 +48,8 @@ function draw() {
   yoff += 0.001;
 
   // Instructions
-  let limit = 60;
-  if (!isActive) {
+  let limit = 40;
+  if (!isActive && frameCount <= currentFrame + limit) {
     if (fontSize < w * 0.02) {
       fontSize += w * 0.0001;
     }
@@ -57,7 +57,7 @@ function draw() {
   } else if (isActive && frameCount > currentFrame + limit) {
     fontOpacity -= 15;
     if (fontSize < w * 0.023) {
-      fontSize += w * 0.00005;
+      fontSize += 0.06;
     }
   }
 
