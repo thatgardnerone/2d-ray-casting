@@ -47,24 +47,24 @@ function draw() {
   xoff += 0.001;
   yoff += 0.001;
 
-  // Instructions
-  let limit = 40;
-  if (!isActive && frameCount <= currentFrame + limit) {
-    if (fontSize < w * 0.02) {
-      fontSize += w * 0.0001;
-    }
-    fontOpacity += 15;
-  } else if (isActive && frameCount > currentFrame + limit) {
-    fontOpacity -= 15;
-    if (fontSize < w * 0.023) {
-      fontSize += 0.06;
-    }
-  }
+  // Instructions when under mouse control
+  // let limit = 40;
+  // if (!isActive && frameCount <= currentFrame + limit) {
+  //   if (fontSize < w * 0.02) {
+  //     fontSize += w * 0.0001;
+  //   }
+  //   fontOpacity += 15;
+  // } else if (isActive && frameCount > currentFrame + limit) {
+  //   fontOpacity -= 15;
+  //   if (fontSize < w * 0.023) {
+  //     fontSize += 0.06;
+  //   }
+  // }
 
-  fill(255, fontOpacity);
-  textSize(fontSize);
-  textAlign(CENTER, CENTER);
-  text("Move the mouse", w / 2, h / 2);
+  // fill(255, fontOpacity);
+  // textSize(fontSize);
+  // textAlign(CENTER, CENTER);
+  // text("Move the mouse", w / 2, h / 2);
 }
 
 function windowResized() {
